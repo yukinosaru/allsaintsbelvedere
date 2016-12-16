@@ -1,0 +1,320 @@
+/*
+Theme Name: All Saints Belvedere
+Theme URI: http://www.allsaintsbelvedere.com
+Description: 3 columns with ticker
+Version: 0.1
+Author: Daniel Yeo
+Author URI: http://www.dkcy.com.
+Tags: custom header, fixed width, three columns, widgets
+License: Creative Comms Attribution-ShareAlike 3.0 Unported
+License URI: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+*/
+
+/* Import WebFonts for use */
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url("editor-style.css"); // Includes the stylesheet for the post editor
+
+/* Default colours */
+body {
+	background: #ffffff;
+	color: #333;
+	text-align: left;
+	margin: 0 0 20px 0;
+	padding: 0;
+    }
+
+/* Default link styles */
+a {
+	color: #bcabd3;
+	text-decoration: none;
+	}
+    
+a img {
+	border: none;
+	}
+    
+a:hover {
+	color: #bcabd3;
+	text-decoration: underline;
+	}
+
+/* Colours for left hand column */
+#left {
+	color: #28529a;
+	background: #bcabd3;
+    }
+
+/* Style links for left */
+#left a {color: inherit;}
+#left a:hover {color: white;}
+
+/* Colours for central column links */
+#main a {
+	color: #28529a
+    }
+
+/* Colours for footer */
+#footer {
+    background: #bcabd3;
+    color: #fff;
+}
+
+/* Style links for footer */
+#footer a, #footer a:hover, #footer a:visited {
+	color: #fff;
+	}
+
+
+/* Used for all media types */    
+h1, h2, h3 {
+	font-weight: bold;
+	}
+
+h1 {
+	text-align: left;
+	margin: 0px;
+	}
+
+h2 {
+	font-size: 1em;
+	text-align: left;
+	font-weight: normal;
+	margin: 0px;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description {
+	text-decoration: none;
+	color: #28529a;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #28529a;
+	}
+
+
+/* End Typography & Colors */
+
+
+
+/*
+
+Schematic element layout (as defined for desktops
+Mobile and table stylesheets hide some elements
+
+******************************
+*           Header           *
+******************************
+******************************
+*         Imagebanner        *
+******************************
+@@@@@@@@@@ Container @@@@@@@@@
+@ ************************** @
+@ *      News_wrapper      * @
+@ ************************** @
+@ ***** ************** ***** @
+@ *   * *            * *   * @
+@ * L * *            * * R * @
+@ * e * *            * * i * @
+@ * f * *    Main    * * g * @
+@ * t * *            * * h * @
+@ *   * *            * * t * @
+@ *   * *            * *   * @
+@ ***** ************** ***** @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+******************************
+*           Footer           *
+****************************** 
+
+*/
+
+
+/*************************************************************************/
+/* Sets up structure for screens larger than 640px - targetting desktops */
+/*************************************************************************/
+@media only screen and (min-device-width: 640px) {
+
+/* Default fonts and links */
+body {
+	font-size: 10px;
+	font-family: 'Calibri', Verdana, Arial, Sans-Serif;
+	background: #ffffff;
+	color: #333;
+	text-align: left;
+	margin: 0 0 20px 0;
+	padding: 0;
+    }
+
+/* Defines the header element */
+#header {
+	background: white;
+	margin: 0px;
+	padding: 20px 25px;
+	min-width: 600px;
+	font-size: 5em;
+	font-weight: bold;
+	color: #bcabd3;
+	text-align: left;
+	font-family: 'Julius Sans One', sans-serif;
+    }
+
+#header img {
+	float: right;
+	vertical-align: middle;
+	padding: 0px 10px;
+}
+
+#header IMG#cofe {
+	padding: 5px 10px;
+}
+
+/* Defines the image banner */
+#imagebanner {
+	height: 150px;
+	min-width: 600px;
+	background: url('images/banner.png') white no-repeat bottom center;
+	}
+
+/* Defines the container for the main content. Contains news ticker, #left, #right and #main */
+#container {
+	min-width: 500px;
+}
+
+/* Left hand navigation */
+#left {
+	width: 190px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 10px 0px 0px 15px;
+	padding: 10px 0px 10px 0px;
+}
+
+/* Styles navigation DIVs */
+#left DIV {margin: 0px; padding: 2px 7px 2px 10px;}
+#left DIV:hover {background: #28529a;}
+
+/* Right hand information column */
+#right {
+    width: 200px;
+    font-size: 1.4em;
+    float: right;
+    padding: 10px 15px 0px 0px;
+}
+
+/* Central column */
+#main {
+    font-size: 1.6em;
+    margin-left: 210px;
+    margin-right: 215px;
+    padding: 10px 20px 0px 10px;
+}
+
+#main P {
+	margin: 15px 0px;
+}
+
+/* Page footer */
+#footer {
+    clear: both;	// Makes sure the footer sits below the left and right columns
+    min-width: 600px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+}
+
+/*******************************************************/
+/* Sets up structure for mobile device (device width 320px to 640px) */
+/*******************************************************/
+
+@media only screen and (min-device-width : 320px)  
+and (max-device-width : 640px) {
+
+body {
+	font-size: 10px;
+	font-family: 'Calibri', Verdana, Arial, Sans-Serif;
+	background: #ffffff;
+	color: #333;
+	text-align: left;
+	margin: 0 0 20px 0;
+	padding: 0;
+    }
+
+#header {
+	background: white;
+	margin: 0px;
+	padding: 10px 10px 5px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #bcabd3;
+    text-align: center;
+	font-family: 'Julius Sans One', sans-serif;
+	}
+
+/* Hides CofE logo and Diocese logo */
+#header IMG {
+	display: none;
+	}
+
+#imagebanner {
+	height: 100px;
+        background: url('images/webbanner.png') white no-repeat bottom center;
+	}
+
+#container {
+    font-size: 1.2em;
+	padding-top: 5px;
+clear: both;
+}
+
+/* Hides both the left and the right columns */ 
+#left, #right {
+   display: none;
+}
+
+/* Styles the main column (now the sole column) */
+#main {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 0px 0px 0px;
+}
+#main P {
+	margin: 5px 0px 15px;
+	padding: 0px 5px;
+}
+
+.news_wrapper {
+	margin-left: 10px !important;
+	font-size: 1em !important;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    background: #bcabd3;
+    color: #fff;
+}
+
+/* Gives the news headers a coloured background and repositions the text */ 
+H1 {
+	background: #bcabd3;
+	margin: 0px;
+	padding: 5px 10px 0px;
+	font-size: 2em;
+}
+
+H2 {
+	background: #bcabd3;
+	margin: 0px;
+	padding: 0px 10px 5px;
+	font-size: 1em;
+}
+
+#main HR {
+	display: none;
+}
+}
+
+/* "There's only one way of life and that's your own, your own, your own." */
